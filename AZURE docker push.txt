@@ -1,0 +1,15 @@
+
+az acr create --resource-group <resource-group-name> --name <acr-name> --sku Basic
+az acr create --resource-group sample-web-app-group --name ravidcokerregistry --sku Basic
+
+az acr login --name <acr-name>
+az acr login -n ravidcokerregistry
+
+az acr show --name <acr-name> --query loginServer --output table
+az acr show --name ravidcokerregistry --query loginServer --output table
+
+docker tag <local-image> <acr-login-server>/<local-image>:v1
+docker tag ravi-web-image ravidcokerregistry.azurecr.io/ravi-web-image:v1
+
+docker push <acr-login-server>/<local-image>:v1
+docker push ravidcokerregistry.azurecr.io/ravi-web-image:v1
