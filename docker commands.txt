@@ -1,0 +1,25 @@
+
+Build a docker file
+docker build . -t <tag name>
+docker build . -t ravi-web-image
+
+List all images
+docker images
+
+List all containers
+docker ps
+
+Run a container from an image
+docker run --name <container-name> -d -p 8000:80 
+
+Stop a container
+docker stop <container-name>
+
+Remove a container
+docker rm <container-name>
+
+Tag an image
+docker tag <image-name> <user-name>/<image-name>
+
+Push an image to docker hub
+docker push <user-name>/<image-name>

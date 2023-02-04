@@ -9,6 +9,28 @@ node index.js // to run the app from index.js
 open browser and type localhost:80
 
 
+========================================================================
+
+create new file "dockerfile"
+
+FROM node:8.9.3-alpine
+RUN mkdir -p /usr/src/app
+COPY ./app/* /usr/src/app/
+WORKDIR /usr/src/app
+RUN npm install
+CMD node /usr/src/app/index.js
+
+========================================================================
+
+from the docker-test-app folder
+docker build . -t ravi-web-image //. is the current folder where "app" is present
+>>docker image will be shown in docker desktop
+========================================================================
+docker run --name <container-name> -d -p 3000:80 
+docker run --name ravi-web-container -d -p 3000:80 ravi-web-image
+
+
+
 
 
 
