@@ -1,0 +1,15 @@
+create repo for docker-test-app and clone it
+create new folder app and paste the 3 files index.html, index.js,package.json
+
+
+npm install //for all dependencies
+
+node index.js // to run the app from index.js
+
+open browser and type localhost:80
+
+
+
+
+
+
