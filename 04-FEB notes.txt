@@ -29,6 +29,12 @@ docker build . -t ravi-web-image //. is the current folder where "app" is presen
 docker run --name <container-name> -d -p 3000:80 
 docker run --name ravi-web-container -d -p 3000:80 ravi-web-image
 
+//new container "ravi-web-container" is created for ravi-web-image app
+
+
+docker tag <image-name> <user-name>/<image-name>
+docker tag ravi-web-image ravik22/ravi-web-image
+docker tag ravi-web-image2 ravik22/ravi-web-image2
 
 
 
